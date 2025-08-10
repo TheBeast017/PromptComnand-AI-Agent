@@ -8,11 +8,20 @@ async def test_llm():
         key = os.environ.get('EMERGENT_LLM_KEY')
         print(f"Using key: {key[:15]}...")
         
+        # Simple initialization without specifying model
         chat = LlmChat(
             api_key=key,
             session_id="test-session",
             system_message="You are a helpful assistant."
-        ).with_model("openai", "gpt-4o-mini")
+        )
+        
+        # Try different model configurations
+        try:
+            chat = chat.with_model("openai", "gpt-4o-mini")
+            print("Model set successfully")
+        except Exception as e:
+            print(f"Model setting error: {e}")
+            # Continue without model specification
         
         user_message = UserMessage(text="Say hello")
         
