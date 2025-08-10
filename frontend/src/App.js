@@ -297,6 +297,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <Toaster />
     </div>
   );
 }
