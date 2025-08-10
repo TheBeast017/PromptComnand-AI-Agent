@@ -84,7 +84,9 @@ async def generate_prompt(request: PromptRequest):
         )
         
         response = await chat.send_message(user_message)
-        llm_output = response.strip()
+        print(f"LLM Response type: {type(response)}")
+        print(f"LLM Response: {response}")
+        llm_output = str(response).strip()
         
         # Parse the response to extract structured and system prompts
         parts = llm_output.split("SYSTEM_PROMPT:")
