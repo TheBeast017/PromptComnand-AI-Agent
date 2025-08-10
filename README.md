@@ -109,8 +109,3 @@ Multi-agent collaboration
 
 
 ---
-
-I can also add **badges**, **screenshots**, and **API documentation sections** if you want this README to look more like a polished open-source project page.  
-
-Do you want me to enhance this README with **GitHub-style badges** and **frontend screenshots** so it looks professional?
-
