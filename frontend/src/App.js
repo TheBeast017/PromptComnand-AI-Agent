@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { Badge } from './components/ui/badge';
 import { Copy, Wand2, Sparkles, FileText, Settings } from 'lucide-react';
 import { toast } from 'sonner';
+import { Toaster } from 'sonner';
 
 function App() {
   const [command, setCommand] = useState('');
