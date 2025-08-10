@@ -1,34 +1,132 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Custom styles for AI Prompt Engineer app */
+
+.App {
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom scrollbar for code blocks */
+pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+pre::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
 }
 
-.App-link {
-    color: #61dafb;
+pre::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+pre::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Glass morphism effect */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Custom button hover effects */
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Code block styling */
+pre {
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+/* Responsive design improvements */
+@media (max-width: 640px) {
+  .max-w-6xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  pre {
+    font-size: 0.75rem;
+  }
+}
+
+/* Custom gradient text */
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Focus states */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Card hover effects */
+.shadow-lg:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Tab content transitions */
+[data-state="active"] {
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Toast notification styling */
+.sonner-toast {
+  font-family: inherit;
+}
+
+/* Improved button gradients */
+.bg-gradient-to-r:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  transition: 0.3s;
+}
+
+/* Loading state improvements */
+.opacity-50 {
+  opacity: 0.5;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+  .space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .space-x-3 > * + * {
+    margin-left: 0.75rem;
+  }
 }
